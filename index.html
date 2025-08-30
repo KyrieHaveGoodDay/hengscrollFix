@@ -35,10 +35,35 @@
 			pointer-events: none;
 		}
 
+		.scrollBG.bg1 {
+			background-image: url(./images/heng.jpg);
+		}
+
+		.scrollBG.bg2 {
+			background-image: url(./images/body2.png);
+		}
+
+		.scrollBG.bg3 {
+			background-image: url(./images/body3.png);
+		}
+
 		@media screen and (max-width: 500px) {
 			.scrollBG {
-				background-position-x: -90px;
-				background-repeat: repeat;
+				/* background-position-x: -90px; */
+				/* background-repeat: repeat; */
+				margin-bottom: 20px;
+			}
+
+			.scrollBG.bg1 {
+				background-image: url(./images/test.png);
+			}
+
+			.scrollBG.bg2 {
+				background-image: url(./images/test.png);
+			}
+
+			.scrollBG.bg3 {
+				background-image: url(./images/test.png);
 			}
 		}
 	</style>
@@ -107,11 +132,11 @@
 			</div>
 		</section>
 
-		<section class="scrollBG" style="background-image: url(./images/heng.jpg); ">
+		<section class="scrollBG bg1">
 		</section>
-		<section class="scrollBG" style="background-image: url(./images/body2.png);">
+		<section class="scrollBG bg2">
 		</section>
-		<section class="scrollBG" style="background-image: url(./images/body3.png);">
+		<section class="scrollBG bg3">
 		</section>
 
 		<!-- <section id="two" class="wrapper alt style2">
@@ -183,8 +208,8 @@
 				var extraOffset = 0;
 
 				// 如果是 body3.png 這個 section，灌水 120px
-				if ($(this).attr('style') && $(this).attr('style').includes('body3.png')) {
-					extraOffset = -250; // 你可以調整這個數字
+				if ($(this).hasClass('bg3')) {
+					extraOffset = -550; // 你可以調整這個數字
 				}
 
 				// 只有當視窗底部超過 section 頂部時才開始
@@ -200,9 +225,9 @@
 			});
 		});
 	</script>
-	<section class="hero">
+	<!-- <section class="hero">
 		<img src="your-image.jpg" alt="heng heng 高雄 高雄餐酒館 高雄法式餐廳">
-	</section>
+	</section> -->
 </body>
 
 </html>

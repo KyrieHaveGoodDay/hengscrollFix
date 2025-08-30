@@ -51,19 +51,19 @@
 			.scrollBG {
 				/* background-position-x: -90px; */
 				/* background-repeat: repeat; */
-				margin-bottom: 20px;
+				/* margin-bottom: 20px; */
 			}
 
 			.scrollBG.bg1 {
-				background-image: url(./images/test.png);
+				background-image: url(./images/heng_mb.png);
 			}
 
 			.scrollBG.bg2 {
-				background-image: url(./images/test.png);
+				background-image: url(./images/body2_mb.png);
 			}
 
 			.scrollBG.bg3 {
-				background-image: url(./images/test.png);
+				background-image: url(./images/body3_mb.png);
 			}
 		}
 	</style>
@@ -209,7 +209,13 @@
 
 				// 如果是 body3.png 這個 section，灌水 120px
 				if ($(this).hasClass('bg3')) {
-					extraOffset = -550; // 你可以調整這個數字
+					if (window.innerWidth <= 500) {
+						// 手機
+						extraOffset = -500;
+					} else {
+						// 桌機
+						extraOffset = 0;
+					}
 				}
 
 				// 只有當視窗底部超過 section 頂部時才開始
